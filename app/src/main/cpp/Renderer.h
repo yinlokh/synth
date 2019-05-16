@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "interfaces/Generator.h"
 #include "oscillators/SineOsc.h"
+#include "interfaces/Processor.h"
 
 class Renderer {
 public:
@@ -14,4 +15,5 @@ private:
     std::atomic<bool> isWaveOn_{false};
     int32_t counter = 0;
     Generator* generator;
+    Processor* adsr;
 };

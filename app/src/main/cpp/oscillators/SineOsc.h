@@ -6,10 +6,6 @@
 class SineOsc : public Generator {
 public:
 
-    SineOsc();
-
-    ~SineOsc();
-
     void setSampleRate(int32_t sampleRate);
 
     float generate(bool noteOn, int32_t t);

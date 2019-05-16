@@ -36,7 +36,7 @@ add_library( # Sets the name of the library.
         src/main/cpp/Renderer.cpp
         src/main/cpp/AudioEngine.cpp
         src/main/cpp/oscillators/SineOsc.cpp
-        src/main/cpp/interfaces/Generator.cpp
+        src/main/cpp/processors/ADSR.cpp
         )
 
 # Searches for a specified prebuilt library and stores the path as a
