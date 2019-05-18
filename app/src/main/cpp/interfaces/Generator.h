@@ -8,8 +8,8 @@
 
 class Generator {
 public:
-    virtual void setSampleRate(int32_t sampleRate) = 0;
-    virtual float generate(bool noteOn, int32_t t) = 0;
+    virtual void set_sample_rate(int32_t sampleRate) = 0;
+    virtual float generate() = 0;
 };
 
 #endif

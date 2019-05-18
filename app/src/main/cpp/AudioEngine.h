@@ -10,9 +10,10 @@ public:
     void stop();
     void restart();
     void setToneOn(bool isToneOn);
+    void setFrequency(float frequency);
 
 private:
-    Renderer oscillator_;
+    Renderer renderer;
     AAudioStream *stream_;
 };
 #endif //PART1_AUDIOENGINE_H

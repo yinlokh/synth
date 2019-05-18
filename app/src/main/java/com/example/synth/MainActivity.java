@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("native-lib");
     }
 
-    private native void touchEvent(int action);
+    private native void touchEvent(int action, float x, float y);
 
     private native void startEngine();
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        touchEvent(event.getAction());
+        touchEvent(event.getAction(), event.getX(), event.getY());
         return super.onTouchEvent(event);
     }
 

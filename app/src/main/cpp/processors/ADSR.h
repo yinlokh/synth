@@ -20,14 +20,17 @@ public:
     void set_release(int32_t release);
 
 private:
-    int32_t a = 10000;
-    int32_t d = 10000;
-    float s = 0.5;
-    int32_t r = 10000;
+    float interpolate(float a, float b, float p);
+
+    int32_t a = 300;
+    int32_t d = 50000;
+    float s = 0.5f;
+    int32_t r = 50000;
     int32_t sample_rate;
     int32_t frames;
-    int32_t release_frames;
     bool at_rest = true;
+    bool was_note_on = false;
+    float release_level = 0.f;
 };
 
 

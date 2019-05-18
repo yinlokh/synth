@@ -32,7 +32,7 @@ bool AudioEngine::start() {
     AAudioStreamBuilder_setFormat(streamBuilder, AAUDIO_FORMAT_PCM_FLOAT);
     AAudioStreamBuilder_setChannelCount(streamBuilder, 1);
     AAudioStreamBuilder_setPerformanceMode(streamBuilder, AAUDIO_PERFORMANCE_MODE_LOW_LATENCY);
-    AAudioStreamBuilder_setDataCallback(streamBuilder, ::dataCallback, &oscillator_);
+    AAudioStreamBuilder_setDataCallback(streamBuilder, ::dataCallback, &renderer);
     AAudioStreamBuilder_setErrorCallback(streamBuilder, ::errorCallback, this);
 
     // Opens the stream.
@@ -45,7 +45,7 @@ bool AudioEngine::start() {
 
     // Retrieves the sample rate of the stream for our oscillator.
     int32_t sampleRate = AAudioStream_getSampleRate(stream_);
-    oscillator_.setSampleRate(sampleRate);
+    renderer.setSampleRate(sampleRate);
 
     // Sets the buffer size. 
     AAudioStream_setBufferSizeInFrames(
@@ -81,5 +81,9 @@ void AudioEngine::stop() {
 }
 
 void AudioEngine::setToneOn(bool isToneOn) {
-    oscillator_.setWaveOn(isToneOn);
+    renderer.setWaveOn(isToneOn);
+}
+
+void AudioEngine::setFrequency(float frequency) {
+    renderer.setFrequency(frequency);
 }

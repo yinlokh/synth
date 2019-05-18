@@ -15,16 +15,18 @@ public:
 
     void set_waveform(Waveform w);
 
-    void set_frequency(int32_t frequency);
+    void set_frequency(double frequency);
 
-    void setSampleRate(int32_t sampleRate);
+    void set_sample_rate(int32_t sampleRate);
 
-    float generate(bool noteOn, int32_t t);
+    void set_phase(float phase);
+
+    float generate();
 
 private:
     Waveform waveform = SINE;
     int32_t sampleRate;
-    int32_t frequency;
+    double frequency;
     float phase = 0;
     double phase_increment = 0;
 };
