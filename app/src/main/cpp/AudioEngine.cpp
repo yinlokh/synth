@@ -87,3 +87,31 @@ void AudioEngine::setToneOn(bool isToneOn) {
 void AudioEngine::setFrequency(float frequency) {
     renderer.setFrequency(frequency);
 }
+
+void AudioEngine::setCutoff(float cutoff) {
+    renderer.setCutoff(cutoff);
+}
+
+void AudioEngine::setFilterEnvAmt(float val) {
+    renderer.setFilterEnvAmt(val);
+}
+
+void AudioEngine::setRes(float res) {
+    renderer.setRes(res);
+}
+
+void AudioEngine::setAttack(int32_t i, float val) {
+    renderer.setAttack(i, val);
+}
+
+void AudioEngine::setDecay(int32_t i, float val) {
+    renderer.setDecay(i, val);
+}
+
+void AudioEngine::setSustain(int32_t i, float val) {
+    renderer.setSustain(i, val);
+}
+
+void AudioEngine::setRelease(int32_t i, float val) {
+    renderer.setRelease(i, val);
+}

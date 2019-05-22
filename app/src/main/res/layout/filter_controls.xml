@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.synth.panels.FilterControls
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:paddingLeft="12dp"
+    android:paddingStart="12dp"
+    android:paddingRight="12dp"
+    android:paddingEnd="12dp">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end"
+            android:gravity="right|end|bottom"
+            android:textSize="8sp"
+            android:text="Filter"
+            android:textAllCaps="true"
+            android:background="#ffeeeeee"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffdddddd">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <com.example.synth.ui.Knob
+                    android:id="@+id/cutoff"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="cutoff"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <com.example.synth.ui.Knob
+                    android:id="@+id/res"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="res"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <com.example.synth.ui.Knob
+                    android:id="@+id/env_amt"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="env amt"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.example.synth.panels.FilterControls>

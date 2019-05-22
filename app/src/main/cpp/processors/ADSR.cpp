@@ -30,7 +30,7 @@ float ADSR::process(bool noteOn, int32_t t, float input) {
         release_level = level;
     } else if (!noteOn && !at_rest) {
         // release
-        level = interpolate(release_level, 0.f, (float) frames / (float) r);
+        level = interpolate(fmin(s, release_level), 0.f, (float) frames / (float) r);
         at_rest = level == 0;
     }
 //
